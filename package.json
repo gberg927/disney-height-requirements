@@ -4,6 +4,10 @@
   "description": "",
   "version": "0.1.0",
   "author": "Dennis Glasberg <dennis.glasberg@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:gberg927/disney-height-requirements.git"
+  },
   "dependencies": {
     "babel-jest": "^24.9.0",
     "gatsby": "^2.17.6",
