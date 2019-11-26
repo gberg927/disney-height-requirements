@@ -32,5 +32,5 @@ jobs:
         CI: true
     - name: Docker Build and Push to Docker Hub
       run: |
-        docker build . --file Dockerfile --latest gberg927:disney-height-requirements
+        docker build . --file Dockerfile --tag gberg927:disney-height-requirements:latest
         docker push gberg927/disney-height-requirements:latest
