@@ -1,7 +1,6 @@
 name: Gatsby CI/CD Build and Test
 
 on:
-  push:
   pull_request:
     branches:
     - master
