@@ -1,4 +1,4 @@
-name: Gatsby CI/CD Build, Test & Deploy to Docker
+name: Gatsby CI/CD Build and Test
 
 on:
   push:
@@ -30,8 +30,3 @@ jobs:
         npm test
       env:
         CI: true
-    - name: Docker Build and Push to Docker Hub
-      run: |
-        docker build . --file Dockerfile --tag gberg927/disney-height-requirements:latest
-        docker login --username=${{ secrets.DOCKER_HUB_USERNAME }} --password=${{ secrets.DOCKER_HUB_PASSWORD }}
-        docker push gberg927/disney-height-requirements:latest
