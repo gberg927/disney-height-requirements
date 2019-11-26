@@ -13,15 +13,17 @@ const Header = ({ siteTitle, parks }) => (
         </div>
       </div>
     </header>
-    <div className="nav-scroller py-1 mb-2">
-      <nav className="nav d-flex justify-content-between">
-        {parks.map(({ node: park }) => (
-          <AnchorLink className="p-2 text-muted" offset="125" href={`#${park.slug.current}`}>
-            {park.title}
-          </AnchorLink>
-        ))}
-      </nav>
-    </div>
+    {parks && (
+      <div className="nav-scroller py-1 mb-2">
+        <nav className="nav d-flex justify-content-between">
+          {parks.map(({ node: park }) => (
+            <AnchorLink className="p-2 text-muted" offset="125" href={`#${park.slug.current}`}>
+              {park.title}
+            </AnchorLink>
+          ))}
+        </nav>
+      </div>
+    )}
   </nav>
 );
 
