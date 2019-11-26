@@ -1,0 +1,20 @@
+name: Disney Height Requirements Deploy to Docker
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Docker Build and Push to Docker Hub
+      run: |
+        docker build . --file Dockerfile --tag gberg927/disney-height-requirements:latest
+        docker login --username=${{ secrets.DOCKER_HUB_USERNAME }} --password=${{ secrets.DOCKER_HUB_PASSWORD }}
+        docker push gberg927/disney-height-requirements:latest
