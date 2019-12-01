@@ -6,15 +6,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: 'UA-16503259-3',
+        trackingId: `UA-16503259-3`,
         head: false,
-        respectDNT: true,
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
-        pageTransitionDelay: 0,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
+        anonymize: true,
       },
     },
     `gatsby-plugin-react-helmet`,
