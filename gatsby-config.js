@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Disney World Height Calculator`,
-    description: ``,
+    description: `Height Calculator for Walt Disney World Rides. Enter your party's heights to find out which rides are available to ride.`,
     author: `Dennis Glasberg`,
   },
   plugins: [
