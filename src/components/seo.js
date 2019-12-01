@@ -41,8 +41,9 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'keywords',
-          content: 'disney, disney world, walt disney world, height, heights, calculator, rides, disney rides, walt disney rides, walt disney world rides'
-        }
+          content:
+            'disney, disney world, walt disney world, height, heights, calculator, rides, disney rides, walt disney rides, walt disney world rides',
+        },
         {
           property: `og:title`,
           content: title,
