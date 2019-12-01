@@ -5,6 +5,18 @@ module.exports = {
     author: `Dennis Glasberg`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-16503259-3',
+        head: false,
+        respectDNT: true,
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,18 +44,6 @@ module.exports = {
       options: {
         projectId: 'elrawqlj',
         dataset: 'production',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-16503259-3',
-        head: false,
-        respectDNT: true,
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
-        pageTransitionDelay: 0,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
       },
     },
   ],
